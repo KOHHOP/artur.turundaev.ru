@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Hello, world!</title>
+       <style>
+html,body{
+height: 100%;
+}
+.top{
+height:25%;
+background-color:red;
+}
+.triangle_group{
+height:25%;
+width:100%;
+position:relative;
+}
+.triangle1{
+width: 0;
+height: 0;
+border-style: solid;
+border-color: transparent red transparent transparent;
+position:absolute;
+}
+.triangle2{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 50px 0 50px 200px;
+position:absolute;
+border-color: transparent transparent transparent #007bff;;
+}
+.triangle3{width: 0;
+height: 0;
+border-style: solid;
+border-color: transparent transparent bkack transparent
+}
+.down{
+width:100%;
+height:100%;
+background-color:black;
+}
+
+      </style>
+</head>
+<body>
+<div class="top"></div>
+<div class="triangle_group">
+    <div class="triangle1"></div>
+    <div class="triangle2"></div>
+    <div class="triangle3"></div>
+</div>
+<div class="down"></div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	var height_for_triangle = $('.triangle_group').height();
+	var width_for_triangle = $('.triangle_group').width();
+$('.triangle1').css('border-width', '0 ' + width_for_triangle+'px ' + height_for_triangle + 'px 0');
+var css =  height_for_triangle/2+'px 0px '+height_for_triangle/2+'px ' + width_for_triangle/2+ 'px';
+
+
+$('.triangle2').css('border-width', css)
+css =  '0px '+ width_for_triangle/2+'px '+ height_for_triangle+ 'px '+width_for_triangle/2+'px ' ;
+$('.triangle3').css('border-width', css)
+})
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

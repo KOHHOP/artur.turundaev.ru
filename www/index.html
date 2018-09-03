@@ -17,11 +17,14 @@
         .right {
             color: white;
             text-shadow: 1px 1px 1px black;
-            background: #3498DB;
+            overflow:hidden;
         }
         .triangle {
+	         position: absolute;
             background-color: transparent;
-            float: right;
+            top:0;
+            right:0;
+            z-index:10px;
         }
         .fio {
             font-size: 30px;
@@ -37,15 +40,42 @@
         a>i {
             padding: 5% 0 0 5%;
         }
+			.right-image{
+					position: absolute;
+					right: 0;
+					top: 0;
+					z-index: -999;
+			}
+			.opasity-black-bg{
+			   background-color: black;
+			  opacity: 0.6;
+			   width:100%;
+			   height:100%;
+			  z-index: -100;
+			  position: absolute;
+			padding: 0;
+			margin: 0;
+			top:0;
+			right: 0;
+			}
+			.me-image{
+			  margin : 0;
+			 padding : 0;
+			height:100%;
+			width:auto;
+			}
     </style>
 </head>
 <body class="h-100">
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="left col-5 h-100">
+                <img class="img-fluid me-image" src="image/me.jpg"></img>
                 <div class="triangle"></div>
             </div>
             <div class="right text-center col-7 h-100">
+                <img class="img-fluid h-100 p-0 m-0 right-image" src="image/hero-bg.jpg"></img>
+						<div class="opasity-black-bg p-0 m-0 "></div>
                 <div class="fio">Турундаев Артур</div>
                 <div class="position">full-stack разработчик</div>
                 <div class="text-left">
@@ -67,7 +97,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.triangle').css('border-bottom', $('.left').css('height') + '  solid #3498DB');
+            $('.triangle').css('border-bottom', $('.left').css('height') + '  solid black');
             $('.triangle').css('border-left'  , parseInt($('.left').css('width'))/4 + 'px' + '  solid transparent');
         })
     </script>
