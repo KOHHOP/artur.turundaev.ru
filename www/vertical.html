@@ -4,8 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css"  rel="stylesheet">
         <title>Hello, world!</title>
        <style>
+       @font-face {
+    font-family: Oranienbaum; /* Имя шрифта */
+    src: url(fonts/Oranienbaum.ttf); /* Путь к файлу со шрифтом */
+   }
+   @font-face {
+    font-family: RonduitCapitals; /* Имя шрифта */
+    src: url(fonts/RonduitCapitals-Light.otf); /* Путь к файлу со шрифтом */
+   }
+   @font-face {
+    font-family: Bicubik; /* Имя шрифта */
+    src: url(fonts/Bicubik.ttf); /* Путь к файлу со шрифтом */
+   }
+   @font-face {
+    font-family: Highliner_bold; /* Имя шрифта */
+    src: url(fonts/Highliner_bold.otf); /* Путь к файлу со шрифтом */
+   }
+   @font-face {
+    font-family: Highliner_light; /* Имя шрифта */
+    src: url(fonts/Highliner_light.otf); /* Путь к файлу со шрифтом */
+   }
+   @font-face {
+    font-family: Highliner_regular; /* Имя шрифта */
+    src: url(fonts/Highliner_regular.otf); /* Путь к файлу со шрифтом */
+   }
+   
 html,body{
 height: 100%;
 }
@@ -17,6 +43,7 @@ background-color:#21BEC4;
 height:25%;
 width:100%;
 position:relative;
+margin-bottom: 10%;
 }
 .triangle1{
 width: 0;
@@ -40,53 +67,47 @@ border-color: transparent transparent white transparent
 }
 .down{
 width:100%;
-height:100%;
+height:40%;
 background-color:white;
 }
-
-.hexagon {
-    overflow: hidden;
-    visibility: hidden;
-    -webkit-transform: rotate(120deg);
-       -moz-transform: rotate(120deg);
-        -ms-transform: rotate(120deg);
-         -o-transform: rotate(120deg);
-            transform: rotate(120deg);
-    cursor: pointer;
-    }
-.hexagon-in1 {
-    overflow: hidden;
+.me {
+    left: 20%;
+    position: absolute;
+    width: 60%;
+    top: -25%;
+}
+ a {
+    text-decoration:none;
+    color: inherit;
+}
+.contact >a>i {
+            padding: 5% 2% 0 5%;
+            color: #21BEC4;
+        }
+        .fio {
+            font-size: 30px;
+            text-align: center;
+        }
+        .position {
+            font-size: 22px;
+            margin-top: -4px;
+            text-align: center;
+        }
+        .social {
+                    position: absolute;
+    bottom: 0;
+    height: 7%;
     width: 100%;
-    height: 100%;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-        -ms-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    }
-.hexagon-in2 {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
-    visibility: visible;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-        -ms-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    }
-.hexagon-in2:hover {
-    background-image: url(http://placekitten.com/241/241);
-    }
-.hexagon2 {
-    width: 200px;
-    height: 400px;
-    margin: -74% 0 0 20%
-    }
+    text-align: center;
+    line-height: 200%;
+            }
+            .social a {
+                display: inline-block;
+                width: 32%;
+                height: 100%
+            }
 
-      </style>
+</style>
 </head>
 <body>
 <div class="top"></div>
@@ -94,14 +115,23 @@ background-color:white;
     <div class="triangle1"></div>
     <div class="triangle2"></div>
     <div class="triangle3"></div>
-     <div class="hexagon hexagon2">
-<div class="hexagon-in1">
-<div class="hexagon-in2"></div>
-</div>
-</div>
-
+    <img class="me" src="image/me4.png"/>
 </div>
 <div class="down">
+    <div class="fio">Турундаев Артур</div>
+    <div class="position">full-stack разработчик</div>
+    <div class="contact">
+        <a href="mailto:youremailaddress"><i class="far fa-envelope"></i>artur.turundaev@gmail.com</a><br/>
+        <a href="skype:ArturTurundaev?call"><i class="fab fa-skype"></i>ArturTurundaev</a><br/>
+        <a href="tel:+15555551212"><i class="fas fa-phone"></i>+7(925)730-82-23</a><br/>
+        <a href="https://goo.gl/maps/hsDbWYCiibw"><i class="fas fa-map-marker-alt"></i>Str. El'ninskaya, b. 18, of.4, Moscow</a><br/>
+    </div>
+     <div class="social">
+                <a href="vk.com/turundaev" class="element"><i class="fab fa-vk"></i></a>
+                <a href="facebook.com/turundaev" class="element"><i class="fab fa-facebook-f"></i></a>
+                <a href="instagram.com/arturundaev" class="element"><i class="fab fa-instagram"></i></a>
+
+    </div>
 </div>
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>
